@@ -14,12 +14,3 @@ https://app.swaggerhub.com/apis/ALIDARLATIF4/stock-market_tracker/1.0
 Note:- 
 If any endpoint returns “Null reference exception”, please run it once again as I have used a new online database named Supabase. There are some connection errors at times that cause API to return a Null reference exception.
 
-Database Link: -
-If you want to review the database and the tables, please go to the following URL and use the credentials to log in. Click the project SpeerBackEndAssessment project.
-https://app.supabase.com/
-Username: -
-Alidarlatif4@gmail.com
-Password:  - 
-090078601@Lol
-Project Password:-
-Assessment@1919PAK
