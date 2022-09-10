@@ -2,6 +2,7 @@ using Common.Business.Authentication;
 using Common.Data;
 using Common.Data.User;
 using Microsoft.AspNetCore.Mvc;
+using Supabase;
 using Twitter.Controllers.Authentication;
 using User = Common.Models.User;
 
@@ -14,13 +15,15 @@ namespace UserRegistrationTest
         AuthenticationController _authController;
         public UserRegistrationAndLoginTest()
         {
+            Client.Initialize("https://dssxaentuenuzoyuztgl.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzc3hhZW50dWVudXpveXV6dGdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MzQ4NzksImV4cCI6MTk3ODQxMDg3OX0.h91D9DeUKokd7-HS4kER0RkSMmGZ3r1rH-uK36sxfRo");
+
             _userData = new UserSupabaseHelper(new DataClient());
             _auth = new UserAuth(_userData);
             _authController = new AuthenticationController(_auth);
         }
 
         [Theory]
-        [InlineData("alilatif223ddff191919", "ABCD@1919ok")]
+        [InlineData("alilatif22", "ABCD@1919ok")]
         public void RegisterValidUserShouldReturn200OK(string username, string password)
         {
             //Arrange
