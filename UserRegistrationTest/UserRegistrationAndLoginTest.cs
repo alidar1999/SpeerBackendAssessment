@@ -23,7 +23,7 @@ namespace UserRegistrationTest
         }
 
         [Theory]
-        [InlineData("alilatif22", "ABCD@1919ok")]
+        [InlineData("alilatif2542", "ABCD@1919ok")]
         public void RegisterValidUserShouldReturn200OK(string username, string password)
         {
             //Arrange
